@@ -11,7 +11,9 @@ class ProfilScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff091227),
       appBar: AppBar(
+        backgroundColor: const Color(0xff091227),
         title: const Text('Profil'),
       ),
       body: Center(
@@ -23,7 +25,7 @@ class ProfilScreen extends StatelessWidget {
                 radius: 80,
                 backgroundImage: controller.profilPictureUrl.value.isNotEmpty
                     ? FileImage(File(controller.profilPictureUrl.value))
-                    : AssetImage("assets/song1.jpg") as ImageProvider,
+                    : const AssetImage("assets/song1.jpg") as ImageProvider,
               ),
             ),
             const SizedBox(height: 20),
