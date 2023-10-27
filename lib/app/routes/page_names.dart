@@ -1,10 +1,10 @@
-import 'package:flutter_application_1/modules/home/home_binding.dart';
-import 'package:flutter_application_1/modules/home/home_screen.dart';
-import 'package:flutter_application_1/modules/nowplaying/nowplaying_binding.dart';
-import 'package:flutter_application_1/modules/nowplaying/nowplaying_screen.dart';
-import 'package:flutter_application_1/modules/profil/profil_binding.dart';
-import 'package:flutter_application_1/modules/profil/profil_screen.dart';
-import 'package:flutter_application_1/routes/page_routes.dart';
+import 'package:flutter_application_1/app/modules/home/home_binding.dart';
+import 'package:flutter_application_1/app/modules/home/home_screen.dart';
+import 'package:flutter_application_1/app/modules/nowplaying/nowplaying_binding.dart';
+import 'package:flutter_application_1/app/modules/nowplaying/nowplaying_screen.dart';
+import 'package:flutter_application_1/app/modules/profil/profil_binding.dart';
+import 'package:flutter_application_1/app/modules/profil/profil_screen.dart';
+import 'package:flutter_application_1/app/routes/page_routes.dart';
 import 'package:get/get.dart';
 
 class PageRoutes {

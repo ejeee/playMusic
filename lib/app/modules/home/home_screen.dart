@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/modules/home/home_controller.dart';
+import 'package:flutter_application_1/app/modules/home/home_controller.dart';
 //import 'package:flutter_application_1/screen/nowplaying/nowplaying_screen.dart';
-import 'package:flutter_application_1/routes/page_routes.dart';
+import 'package:flutter_application_1/app/routes/page_routes.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
 import 'package:palette_generator/palette_generator.dart';

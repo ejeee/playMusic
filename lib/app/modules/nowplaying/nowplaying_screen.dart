@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/modules/nowplaying/nowplaying_controller.dart';
+import 'package:flutter_application_1/app/modules/nowplaying/nowplaying_controller.dart';
 //import 'package:flutter_application_1/routes/page_routes.dart';
 import 'package:get/get.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/routes/page_names.dart';
-import 'package:flutter_application_1/routes/page_routes.dart';
+import 'package:flutter_application_1/app/routes/page_names.dart';
+import 'package:flutter_application_1/app/routes/page_routes.dart';
 import 'package:get/get.dart';
 
 class MainApp extends StatefulWidget {
