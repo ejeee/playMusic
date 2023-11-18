@@ -53,10 +53,10 @@ class HomeScreen extends GetView<HomeController> {
                 },
               ),
               ListTile(
-                leading: const Icon(IconlyLight.heart),
+                leading: const Icon(IconlyLight.folder),
                 iconColor: const Color(0xffEAF0FF),
                 title: const Text(
-                  'Liked Song',
+                  'Local Files',
                   style: TextStyle(
                     color: const Color(0xffEAF0FF),
                     fontSize: 18,
@@ -86,9 +86,11 @@ class HomeScreen extends GetView<HomeController> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
+          // Recommended Songs Section
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -113,7 +115,36 @@ class HomeScreen extends GetView<HomeController> {
                 _buildSongCard('assets/song5.jpg', 5),
               ],
             ),
-          )
+          ),
+
+          // Liked Songs Section
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Liked Songs',
+                style: TextStyle(
+                  color: Color(0xffEAF0FF),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.vertical,
+              children: [
+                _buildLikedSongCard('assets/song1.jpg', 1),
+                _buildLikedSongCard('assets/song2.jpg', 2),
+                _buildLikedSongCard('assets/song3.jpg', 3),
+                _buildLikedSongCard('assets/song4.jpg', 4),
+                _buildLikedSongCard('assets/song5.jpg', 5),
+                // Add more liked song cards as needed
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -178,6 +209,32 @@ class HomeScreen extends GetView<HomeController> {
           );
         }
       },
+    );
+  }
+
+  Widget _buildLikedSongCard(String imagePath, int songId) {
+    return GestureDetector(
+      onTap: () {
+        Get.toNamed(PageName.nowplaying);
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          elevation: 5,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              imagePath,
+              width: 100,
+              height: 100,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
