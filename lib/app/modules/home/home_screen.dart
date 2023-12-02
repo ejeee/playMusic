@@ -105,15 +105,15 @@ class HomeScreen extends GetView<HomeController> {
           ),
           SizedBox(
             height: 200,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                _buildSongCard('assets/song1.jpg', 1),
-                _buildSongCard('assets/song2.jpg', 2),
-                _buildSongCard('assets/song3.jpg', 3),
-                _buildSongCard('assets/song4.jpg', 4),
-                _buildSongCard('assets/song5.jpg', 5),
-              ],
+            child: Obx(
+              () => ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: controller.recommendedSongs.length,
+                itemBuilder: (context, index) {
+                  final song = controller.recommendedSongs[index];
+                  return _buildSongCard(song.imageUrl, song.id);
+                },
+              ),
             ),
           ),
 
