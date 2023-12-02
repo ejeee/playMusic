@@ -228,7 +228,7 @@ class HomeScreen extends GetView<HomeController> {
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
               imagePath,
-              width: 100,
+              width: 50,
               height: 100,
               fit: BoxFit.cover,
             ),

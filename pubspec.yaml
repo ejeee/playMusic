@@ -6,6 +6,8 @@ environment:
   sdk: ">=3.1.2 <4.0.0"
 
 dependencies:
+  http: ^0.13.3
+  url_launcher: ^6.0.10
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
@@ -15,8 +17,6 @@ dependencies:
   iconly: ^1.0.1
   palette_generator: ^0.3.3+3
 
-  #http
-  http: ^1.1.0
   #dio
   dio: ^5.3.2
   #webview

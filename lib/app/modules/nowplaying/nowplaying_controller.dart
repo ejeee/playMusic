@@ -1,3 +1,5 @@
 import 'package:get/get.dart';
 
-class NowPlayingController extends GetxController {}
+class NowPlayingController extends GetxController {
+  
+}
